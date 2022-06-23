@@ -19,6 +19,9 @@ body{
 /* navigation menu */
 
 .nav{
+    position: fixed;
+    top:0;
+    width:100%;
     background-color:orange;
     height:11vh;
     display:flex;
@@ -66,4 +69,47 @@ body{
 .nav .cart-icon{
     font-size:2.2rem;
     cursor: pointer;
+}
+
+/* Product item */
+
+.product{
+    height:40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:14vh 2vw;
+    padding:3vh 6vw;
+    box-sizing: border-box; 
+    box-shadow:0 0 5px 1px grey;
+}
+
+.product-thumbnail{
+  height:32vh;
+  width:15vw;
+  border-radius: 2px;
+}
+
+.details{
+    margin-left:-35vw;
+}
+
+.details h4 span{
+   color:rgb(15, 97, 15);
+}
+
+.product h3{
+    font-size: 2.2rem;
+    font-weight:900;
+}
+
+.product h4{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.details h4 i{
+    color:rgb(255, 217, 0);
+    font-size:1.5rem;
 }
