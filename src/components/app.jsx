@@ -25,7 +25,6 @@ function App(){
        <Route path = "/" element = {<Home clickedProduct = {handleClickedProduct} searchText = {searchTerm}/>}/>
        <Route path = {"/product/" + thisProduct.id} element = {<ProductPage product = {thisProduct}/> }/>
        </Routes>
-
        </BrowserRouter>
    );
 }

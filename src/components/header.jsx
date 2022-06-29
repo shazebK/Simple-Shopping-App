@@ -1,7 +1,9 @@
 import React,{useState} from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Header(props){
     const [searchTerm,setSearchTerm] = useState("");
+    const navigate = useNavigate();
 
     function handleChange(event){
         const newSearchTerm = event.target.value;
@@ -9,6 +11,7 @@ function Header(props){
     }
 
     function handleSubmit(event){
+        navigate("/");
         props.onSearch(searchTerm);
         event.preventDefault();
     }
