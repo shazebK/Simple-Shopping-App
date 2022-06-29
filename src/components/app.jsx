@@ -16,8 +16,6 @@ function App(){
       setThisProduct(prevValue =>  ({...prevValue,...clickedProduct}));
    }
 
-
-
    return (
        <BrowserRouter>
        <Header onSearch = {handleSearch}/>

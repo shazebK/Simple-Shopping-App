@@ -1,10 +1,31 @@
-import React from "react";
+import React , {useState} from "react";
 
 function ProductPage(props){
+    const [imageN,setImageN] = useState(0);
+    const imageNumber = props.product.images.length;
+
+    function showPrevious(){
+        if(imageN==0)
+        setImageN(imageNumber-1);
+        else
+        setImageN(imageN-1);
+    }
+
+    function showNext(){
+        if(imageN===imageNumber-1)
+        setImageN(0);
+        else
+        setImageN(imageN+1);
+    }
+
     return (
     <div className = "productPage">
         <div className = "productImage">
-            <img src = {props.product.images[0]}/>
+            <img src = {props.product.images[imageN]}/>
+            <div className = "preNext">
+            <button onClick = {showPrevious}>&#60;</button>
+            <button onClick = {showNext}>&#62;</button>
+            </div>
         </div>
         <div className = "productDetails">
             <h1>{props.product.title}</h1>
