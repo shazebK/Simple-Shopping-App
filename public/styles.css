@@ -124,3 +124,66 @@ body{
     color:rgb(255, 217, 0);
     font-size:1.5rem;
 }
+
+/*Product Page*/
+
+.productPage{
+    margin:15vh auto 0;
+    width:80vw;
+    display:flex;
+    justify-content: space-between;
+}
+
+.productImage{
+    height:70vh;
+    width:35vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productImage img{
+    width:35vw;
+    max-height:70vh;
+    border-radius:5px;
+}
+
+.productDetails{
+    width:30vw;
+}
+
+.productDetails h5 i{
+    color:rgb(255, 217, 0);
+    font-size:1.5rem;
+    position:relative;
+    top:1vh;
+}
+
+.productDetails h4{
+    color:green;
+    font-size:1.4rem;
+}
+
+.productDetails h6{
+    font-size:1.1rem;
+}
+
+.productDetails button{
+    border:none;
+    background-color:orange;
+    color:white;
+    height:8vh;
+    width:20vw;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    font-size:1.4rem;
+    cursor:pointer;
+}
+.productDetails button span{
+    font-size:1.8rem;
+}
+
+.productDetails button:hover{
+    background-color: rgb(247, 132, 0);
+}

@@ -1,12 +1,19 @@
 import React from "react";
-import {Link} from "react-router"
+import {useNavigate} from "react-router"
 
 function Product(props){
+    const navigate  = useNavigate();
+
+   function handleClick(){
+      props.productIs(props.prod);
+      navigate("/product/" + props.prod.id);
+   }
+
     return (
-        <div className = "product">
+        <div onClick = {handleClick} className = "product">
         <div className="content">
         <div>
-            <img className = "product-thumbnail" src = {props.prod.thumbnail} alt = {props.title}/>
+            <img className = "product-thumbnail" src = {props.prod.thumbnail} alt = {props.prod.title}/>
         </div>
         <div className = "details">
         <h1>{props.prod.title}</h1>
