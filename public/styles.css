@@ -251,21 +251,19 @@ body{
       /*product Page*/
 
       .productPage{
-        height:105vh;
         flex-direction: column;
         text-align: center;
       }
 
       .productImage{
         width:80vw;
-        height:90vh;
-        margin:0 auto 10vh;
+        height:80vh;
+        margin:3vh 0 10vh;
       }
 
-      .productImage img{
+    .productImage img{
         width:80vw;
-        max-height:90vh;
-        border-radius:5px;
+        max-height:80vh;
     }
 
     .productImage .preNext{
@@ -276,12 +274,11 @@ body{
 
     .productDetails{
         width:80vw;
-        height:55vh;
     }
 
     .productDetails button{
         width:70vw;
-        margin:0 auto;
+        margin:5vh auto;
     }
 
 }
