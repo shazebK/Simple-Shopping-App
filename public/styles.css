@@ -40,6 +40,11 @@ body{
     margin-left:-5vw;
 }
 
+.nav h1 a{
+    text-decoration: none;
+    color:white;
+}
+
 .nav form{
     display:flex;
     justify-content: center;
