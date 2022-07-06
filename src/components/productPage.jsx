@@ -18,6 +18,10 @@ function ProductPage(props){
         setImageN(imageN+1);
     }
 
+    function addProduct(){
+      props.addCheckout(props.product);
+    }
+
     return (
     <div className = "productPage">
         <div className = "productImage">
@@ -36,7 +40,7 @@ function ProductPage(props){
             <h6>{props.product.description}</h6>
             <h2>Hurry ! only {props.product.stock} Left</h2>
             <br/>
-            <button>ADD TO CART <span className="material-symbols-outlined cart-icon">shopping_cart</span> </button>
+            <button onClick = {addProduct}>ADD TO CART <span className="material-symbols-outlined cart-icon">shopping_cart</span> </button>
         </div> 
     </div>
     );

@@ -1,7 +1,6 @@
 import React from "react";
 import Product from "./product";
-import rawData from "../product_dummy_data.json";
-import { Navigate } from "react-router-dom";
+import rawData from "../product_dummy_data.json"; 
 
 function Home(props){
     const products = rawData.products;

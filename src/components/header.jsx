@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Header(props){
     const [searchTerm,setSearchTerm] = useState("");
@@ -18,12 +18,15 @@ function Header(props){
 
     return (
          <div className = "nav">
-            <h1><a href = "/">TakeIt</a></h1>
+            <h1><Link to = "/">TakeIt</Link></h1>
             <form onSubmit = {handleSubmit}>
                 <input type = "text" onChange = {handleChange} placeholder="Search product" value = {searchTerm} autoComplete="off"/>
                 <button><span className="material-symbols-outlined">search</span></button>
             </form>
-            <a><span className="material-symbols-outlined cart-icon">shopping_cart</span></a>
+            <div className = "toSetCount">
+            <Link to = "/checkout"><span className="material-symbols-outlined cart-icon">shopping_cart</span></Link>
+            {props.count?<div className = "countCheckout">{props.count}</div> : null}
+            </div>
          </div>
     );
 }
